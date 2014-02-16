@@ -1,5 +1,5 @@
 /*!
- * CloneIt - v0.0.1 - 2014-02-16
+ * CloneIt-GetIt - v0.0.1 - 2014-02-16
  *
  * Copyright (c) 2014 Farhan Chauhan
  */
