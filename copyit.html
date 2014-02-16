@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+  <script src="copyit_plugin.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+     //Apply Clone
+      $('.container').cloneit({
+        //Target is required. without target function would take body tag as target
+        'target':'.abc',
+        //add_btn is optional. if set it to true, auto add btn would be provide, otherwise you can apply copyit() function in your own way
+        'add_btn':false
+      });
+      //Add Button if add_btn set to false
+      $('.addme').on('click',function(){
+          //use this function to copy your container
+          $().copyit();  
+        });
+
+      $('.fatch').on('click',function(){
+        //fatch all values
+        var fatchall = $().fatchIt();
+        console.log(fatchall);
+      });
+
+    })
+  </script>
+</head>
+<body>
+  <div class="abc">
+    <div class="container" id="container1">
+      <input type="text" id="bb" name="input" /> 
+      <select id="aa" class="abc2" name="select">
+        <option value="a1">a1</option>
+        <option value="a2">a2</option>
+        <option value="a3">a3</option>
+        <option value="a4">a4</option>
+        <option value="a5">a5</option>
+      </select>
+      <input type="checkbox" name="checkbox" />Check It
+    </div>
+  </div>
+    <a href="#" class="addme">Add</a>
+    <a href="#" class="fatch">Fatch</a>
+</body>
+</html>
